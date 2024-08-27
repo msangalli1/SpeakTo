@@ -4,12 +4,8 @@ import os
 
 app = Flask(__name__)
 
-# Define el directorio para almacenar los archivos de audio
-AUDIO_DIR = '/app/audio_files'
-
-# Crea el directorio si no existe
-if not os.path.exists(AUDIO_DIR):
-    os.makedirs(AUDIO_DIR)
+# Usar el directorio temporal de Render para almacenar el archivo de audio
+AUDIO_DIR = '/tmp'
 
 @app.route('/text-to-speech', methods=['POST'])
 def text_to_speech():
