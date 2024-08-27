@@ -16,4 +16,4 @@ def text_to_speech():
     return jsonify({'error': 'No text provided'}), 400
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)  # Configura para escuchar en todas las interfaces y el puerto 5000
+    app.run(host='35.160.120.126', port=5000)  # Asegúrate de usar host='0.0.0.0' y port=5000
